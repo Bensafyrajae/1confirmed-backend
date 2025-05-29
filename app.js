@@ -14,7 +14,7 @@ const app = express();
 
 // 📦 Middlewares
 app.use(cors({
-  origin: 'http://localhost:3000', // Autoriser les requêtes depuis le frontend React
+  origin: process.env.CORS_ORIGIN, // Autoriser les requêtes depuis le frontend React
   credentials: true,               // permettre les cookies / tokens
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Méthodes autorisées
   allowedHeaders: ['Content-Type', 'Authorization'] // En-têtes autorisés
